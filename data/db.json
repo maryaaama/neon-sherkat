@@ -1,0 +1,24 @@
+{
+  "clients": [
+    { "id": 1, "name": "Client 1", "image": "/img/12.png" },
+    { "id": 2, "name": "Client 2", "image": "/img/13.png" },
+    { "id": 3, "name": "Client 3", "image": "/img/14.png" },
+    { "id": 4, "name": "Client 4", "image": "/img/12.png" },
+    { "id": 5, "name": "Client 5", "image": "/img/13.png" },
+    { "id": 6, "name": "Client 6", "image": "/img/14.png" },
+    { "id": 7, "name": "Client 7", "image": "/img/14.png" },
+    { "id": 8, "name": "Client 8", "image": "/img/13.png" }
+  ],
+  "imgSwiper":[
+    {"id":1,
+     "src":"/img/swiper.png"
+     },
+     {"id":2,
+     "src":"/img/cod1.jpg"
+     },
+     {"id":3,
+     "src":"/img/code2.jpg"
+     }
+  ]
+  
+}

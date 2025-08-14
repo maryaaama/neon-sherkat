@@ -1,0 +1,44 @@
+.cardBorder {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image: linear-gradient(
+    0deg,
+    hsl(0, 0%, 100%) -50%,
+    hsl(0, 0%, 40%) 100%
+  );
+  border-radius: 1rem;
+}
+
+.cardBorder::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: left;
+  width: 200%;
+  height: 20rem;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 245, 255) 40%,
+    rgba(0, 191, 255) 60%,
+    rgba(0, 153, 255) 100%
+  );
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

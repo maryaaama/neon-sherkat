@@ -1,0 +1,9 @@
+/* گرادیانت متن نئونی سبک جدید */
+.neonGradientLight {
+  background: linear-gradient(to bottom, #ffffff, #66ccff); /* سفید به آبی نئونی */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 0 15px #042a95, 0 0 30px #042a95aa; /* آبی تیره، شفاف‌تر */
+}
