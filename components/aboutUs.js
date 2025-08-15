@@ -7,18 +7,18 @@ function AboutUsCard() {
     <div id='about'  className="flex flex-col lg:flex-row w-11/12 mx-auto justify-center items-center gap-10 lg:gap-40 py-10">
       
       {/* کارت متن */}
-      <div
-        className="relative flex flex-col gap-4 p-6 w-11/12 sm:max-w-md rounded-xl 
-             shadow-[inset_0_-10px_5px_rgba(0,245,255,0.4)]
-             bg-[hsl(240,15%,9%)]
-             [background-image:
-               radial-gradient(at_88%_40%,hsl(240,15%,9%)_0px,transparent_90%),
-               radial-gradient(at_49%_30%,hsl(240,15%,9%)_0px,transparent_90%),
-               radial-gradient(at_14%_26%,hsl(240,15%,9%)_0px,transparent_90%),
-               radial-gradient(at_0%_64%,#00cfff_0px,transparent_95%),
-               radial-gradient(at_41%_94%,#0099ff_0px,transparent_95%),
-               radial-gradient(at_100%_99%,#0077ff_0px,transparent_95%)]"
-      >
+     <div
+  className="relative flex flex-col gap-4 p-6 w-11/12 sm:max-w-md rounded-xl 
+       shadow-[inset_0_-10px_5px_rgba(0,149,255,0.45)]
+       bg-[hsl(240,15%,9%)]
+       [background-image:
+         radial-gradient(at_88%_40%,hsl(240,15%,9%)_0px,transparent_80%),
+         radial-gradient(at_49%_30%,hsl(240,15%,9%)_0px,transparent_80%),
+         radial-gradient(at_14%_26%,hsl(240,15%,9%)_0px,transparent_80%),
+         radial-gradient(at_0%_64%,#0099ff_0px,transparent_80%),
+         radial-gradient(at_41%_94%,#0066ff_0px,transparent_80%),
+         radial-gradient(at_100%_99%,#0044ff_0px,transparent_80%)]"
+>
         {/* بوردر متحرک */}
         <div className={styles.cardBorder}></div>
 

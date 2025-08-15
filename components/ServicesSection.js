@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { FaCloud, FaShieldAlt, FaCode } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { FaCloud, FaShieldAlt, FaCode } from "react-icons/fa";
 
 function GlowCard({ title, description, Icon }) {
   return (
@@ -7,18 +7,19 @@ function GlowCard({ title, description, Icon }) {
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative w-72 sm:w-80 h-52 sm:h-56 lg:h-64 rounded-3xl bg-[#0a0d3a] p-6 sm:p-8 overflow-hidden border border-[#3a84da] shadow-inner"
+      className="relative flex flex-col justify-start rounded-3xl bg-[#0a0d3a] p-6 sm:p-8 overflow-hidden border border-[#3a84da] shadow-[0_-12px_30px_-8px_#00f5ff40] min-h-[220px] hover:scale-[1.03] transition-transform duration-300"
     >
       {/* Inner gradient glow */}
-      <div
-        className="absolute top-0 left-0 w-full h-full pointer-events-none 
-                   bg-radial-[at_50%_0%] from-[#008cff] via-[#030b2f] to-[#0a0d3a] blur-3xl"
-      />
+      <div className="absolute inset-0 pointer-events-none bg-radial-[at_50%_0%] from-[#008cff] via-[#030b2f] to-[#0a0d3a] blur-3xl" />
 
-      <div className="relative z-10 flex flex-col items-start h-full">
+      <div className="relative z-10 flex flex-col items-start">
         <Icon className="text-[#00f5ff] drop-shadow-[0_0_12px_#00f5ff] text-2xl sm:text-3xl mb-3 sm:mb-4" />
-        <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-semibold">{title}</h3>
-        <p className="text-indigo-200 text-xs sm:text-sm lg:text-base mt-2">{description}</p>
+        <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-semibold">
+          {title}
+        </h3>
+        <p className="text-indigo-200 text-xs sm:text-sm lg:text-base mt-2">
+          {description}
+        </p>
       </div>
     </motion.div>
   );
@@ -26,7 +27,10 @@ function GlowCard({ title, description, Icon }) {
 
 export default function ServicesSection() {
   return (
-    <section id='services' className="flex flex-col items-center gap-8 sm:gap-10 p-6 sm:p-10 bg-[#0a0d3a] h-full">
+    <section
+      id="services"
+      className="flex flex-col items-center gap-8 sm:gap-10 p-6 sm:p-10 bg-[#0a0d3a] mb-20"
+    >
       {/* عنوان بخش */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -37,8 +41,8 @@ export default function ServicesSection() {
         Our Services
       </motion.h2>
 
-      {/* کارت‌ها */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-8">
+      {/* کارت‌ها - شبیه پروژه‌ها */}
+      <div className="grid gap-6 sm:gap-8 md:grid-cols-3 w-full max-w-6xl">
         <GlowCard
           title="Cloud Services"
           description="Secure cloud hosting, backup, and storage solutions."

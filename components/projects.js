@@ -5,13 +5,15 @@ import projects from '@/data/projects.js'
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false)
-
   const visibleProjects = showAll ? projects : projects.slice(0, 3)
 
   return (
-    <section id='portfolio' className="py-20 px-6 w-full text-white bg-transparent justify-center flex flex-col items-center ">
+    <section
+      id='portfolio'
+      className="flex flex-col items-center gap-8 sm:gap-10 p-6 sm:p-10 bg-[#0a0d3a] h-full sm:mt-10"
+    >
       {/* عنوان */}
-      <div className="max-w-3xl text-center mb-12">
+      <div className="max-w-3xl text-center mb-8">
         <h2 className="text-2xl sm:text-4xl font-bold neonGradientLight">Recent Projects</h2>
         <p className="text-white/60 mt-2 sm:text-lg text-sm">
           Crafted with passion and precision
@@ -19,28 +21,32 @@ export default function Projects() {
       </div>
 
       {/* گرید پروژه‌ها */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full sm:w-8/12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-6xl">
         {visibleProjects.map((project) => (
           <motion.div
             key={project.id}
-            className="border border-white/20 bg-white/5 backdrop-blur-md rounded-xl overflow-hidden shadow-lg shadow-[#00f5ff]/30 hover:shadow-[#00a0ff]/50 transition-shadow duration-300"
-            initial={{ opacity: 0, scale: 0.9 }}
+            className="relative flex flex-col border border-white/20 bg-white/5 backdrop-blur-md rounded-xl overflow-hidden 
+                       shadow-lg shadow-[#00f5ff]/30 
+                       hover:shadow-[#00a0ff]/50 
+                       transition-shadow duration-300"
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             {/* تصویر */}
             <div
-              className="sm:h-48 h-30 bg-cover bg-center"
+              className="aspect-video bg-cover bg-center w-full"
               style={{ backgroundImage: `url(${project.image})` }}
             />
 
             {/* متن پروژه */}
-            <div className="p-6 flex flex-col justify-between">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-2 neonGradientLight">
+            <div className="p-5 flex flex-col gap-3 flex-1">
+              <h3 className="text-lg sm:text-xl font-semibold neonGradientLight">
                 Project #{project.id}
               </h3>
-              <p className="text-white/70 text-sm sm:text-base">
+              <p className="text-white/70 text-sm sm:text-base flex-1">
                 A tailored digital solution built for client success and engagement.
               </p>
             </div>

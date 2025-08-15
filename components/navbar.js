@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black/30 backdrop-blur-md sm:py-6 py-4 shadow-lg z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-20 flex justify-between items-center">
         {/* لوگو */}
         <div className="flex items-center">
          <span className="sm:text-2xl text-lg font-bold tracking-wide bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-300 text-transparent bg-clip-text relative 

@@ -31,7 +31,7 @@ export default function HeroSection() {
          className="z-20 text-center px-6 sm:px-8 md:px-12 mx-6 mt-0 sm:mt-20
                     border border-white/20 bg-white/5 backdrop-blur-md 
                     p-6 pb-4 sm:p-8 rounded-xl 
-                    shadow-[0_-12px_30px_-8px_rgba(90,174,246,0.4)]
+                    shadow-[0_-12px_30px_-8px_rgba(0,245,255,0.3)]
                     max-w-[95%] sm:max-w-2xl "
        >
        <h1

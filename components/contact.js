@@ -35,7 +35,7 @@ export default function Contact() {
       
       {/* محتوای تماس با ما */}
       <motion.div 
-        className="mb-40 z-20 mx-auto text-center border border-white/20 bg-white/5 backdrop-blur-md p-8  max-w-[80%] sm:max-w-2xl rounded-xl shadow-lg shadow-[#00a0ff]/40"
+        className="mb-40 z-20 mx-auto text-center border border-white/20 bg-white/5 backdrop-blur-md p-8  max-w-[80%] sm:max-w-2xl rounded-xl shadow-lg shadow-[#00f5ff]/30"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
